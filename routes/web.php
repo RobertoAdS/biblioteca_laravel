@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\UsuarioController;
 
 /*
 |--------------------------------------------------------------------------
@@ -13,10 +14,4 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/',function(){
-    return 'Minha primeira rota';
-});
-
-Route::get('contato',function(){
-    return 'Minha segunda rota';
-});
+Route::get('/',[UsuarioController::class,'cadastrar']);
